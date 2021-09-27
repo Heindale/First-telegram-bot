@@ -25,7 +25,7 @@ def welcome(message):
 
 @bot.message_handler(content_types=['text'])
 def lalala(message):
-    if message.chat.type == 'supergroup':
+    if message.chat.type == 'privat':
         if message.text == '🎲 Рандомное число':
             bot.send_message(message.chat.id, str(random.randint(0,100)))
         elif message.text == '😊 Как дела?':
@@ -39,7 +39,7 @@ def lalala(message):
             bot.send_message(message.chat.id, 'Отлично, сам как?', reply_markup=markup)
         elif message.text == 'Свайпнуть кнопку':
             bot.send_message(message.chat.id, 'Коромысло')
-        elif message.text == 'Свайпнуть кнопку':
+        elif message.text == 'Биография':
             bot.send_message(message.chat.id, '''Адо́льф Ги́тлер (нем. Adolf Hitler [ˈadɔlf ˈhɪtlɐ] 
             Информация о файле слушать; 20 апреля 1889, деревня Рансхофен[de][1] (ныне — часть города 
             Браунау-ам-Инн), Верхняя Австрия, Австро-Венгрия — 30 апреля 1945, Фюрербункер, Берлин, 
